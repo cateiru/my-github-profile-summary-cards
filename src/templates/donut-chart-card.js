@@ -28,13 +28,13 @@ function createDonutChartCard(title, data, theme) {
         .selectAll(null)
         .data(pieData)
         .enter()
-        .append('rect')
+        .append('circle')
         .attr(
-            'y',
-            (d) => labelHeight * d.index * 1.8 + card.height / 2 - radius - 12
+            'cy',
+            (d) =>
+                labelHeight * d.index * 1.8 + card.height / 2 - radius - 12 + 6
         ) // rect y-coordinate need fix,so I decrease y, but I don't know why this need fix.
-        .attr('width', labelHeight)
-        .attr('height', labelHeight)
+        .attr('r', labelHeight - 6)
         .attr('fill', (pieData) => pieData.data.color)
         .attr('stroke', `${theme.bg_color}`)
         .style('stroke-width', '1px');
