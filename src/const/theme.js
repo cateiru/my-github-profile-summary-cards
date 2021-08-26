@@ -57,10 +57,10 @@ ThemeMap.set('nord_bright', {
     line_chart_color: '#88c0d0',
 });
 ThemeMap.set('nord_dark', {
-    title_color: '#eceff4',
+    title_color: '#81A1C1',
     text_color: '#e5e9f0',
     bg_color: '#2e3440',
-    stroke_color: '#eceff4',
+    stroke_color: '#2e3440',
     icon_color: '#8fbcbb',
     line_chart_color: '#88c0d0',
 });
