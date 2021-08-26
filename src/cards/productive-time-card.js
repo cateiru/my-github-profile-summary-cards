@@ -39,7 +39,7 @@ const getProductiveTimeData = async function (username) {
     const chartData = new Array(24);
     chartData.fill(0);
     for (const time of productiveTime) {
-        const hour = new Date(time).getUTCHours(); // we use UTC+0 here
+        const hour = (new Date(time).getUTCHours() + 9) % 24; // we use UTC+9 here
         chartData[hour] += 1;
     }
 
