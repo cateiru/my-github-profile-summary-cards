@@ -12,6 +12,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
       - run: npn install
       - run: npm run run ${{ github.repository_owner }}
         env:
