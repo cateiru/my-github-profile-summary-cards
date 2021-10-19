@@ -12,6 +12,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: dist/index.js ${{ github.repository_owner }}
+      - run: node dist/index.js ${{ github.repository_owner }}
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
