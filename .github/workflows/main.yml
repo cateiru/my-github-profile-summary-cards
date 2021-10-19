@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - run: npn install
+      - run: npm install
       - run: npm run run ${{ github.repository_owner }}
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
